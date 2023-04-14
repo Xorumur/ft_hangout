@@ -64,7 +64,7 @@ const EditContact = (props) => {
 	}
 
 	return (
-		<View style={{flex: 1, position: 'relative'}}>
+		<View style={{flex: 1, position: 'relative', backgroundColor: '#FD3A73', justifyContent: 'center', alignItems: 'center'}}>
 			<View style={style.inputContainer}>
 				<Text style={style.title}>Name</Text>
 				<TextInput
@@ -103,8 +103,12 @@ const EditContact = (props) => {
 
 const style = {
 	inputContainer:{
-		flexDirection: 'column',
-		paddingLeft: 50,
+		height: 300,
+		width: 300,
+		backgroundColor: '#424242',
+		borderRadius: 10,
+		paddingLeft: 10,
+		paddingRight: 10,
 	},
 	buttonContainer: {
 		flexDirection: 'row',
@@ -132,11 +136,14 @@ const style = {
 	title: {
 		fontSize: 20,
 		marginTop: 20,
+		color: 'white',
+		paddingBottom: 10,
 	},
 	input: {
 		borderWidth: 1,
-		width: 100,
+		width: '100%',
 		borderRadius: 5,
+		backgroundColor: 'gray',
 	}
 };
 

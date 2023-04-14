@@ -29,13 +29,14 @@ const style = {
 		justifyContent: 'space-between',
 		alignItems: 'center',
 		marginTop: 20,
-		backgroundColor: 'gray',
-		borderRadius: 10,
-		height: 100,
+		backgroundColor: '#424242',
+		borderTopWidth: 1,
+		borderBottomWidth: 1,
+		height: 70,
 		padding: 5,
 	},
 	Name: {
-		color: 'white',
+		color: '#fd5564',
 		fontSize: 40,
 	},
 	Setting: {

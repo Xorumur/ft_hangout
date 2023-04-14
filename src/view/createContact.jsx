@@ -44,35 +44,37 @@ const CreateContact = ({ navigation }) => {
 		<View style={{
 			flex: 1,
 			flexDirection: 'column',
-			// justifyContent: 'center',
-			// alignItems: 'center',
-			paddingLeft: 50,
+			justifyContent: 'center',
+			alignItems: 'center',
+			backgroundColor: '#FD3A73'
 		}}>
-			<Text>Name</Text>
-			<TextInput
-				value={name}
-				maxLength={15}
-				placeholder="Name"
-				style={style.input}
-				onChangeText={(texte) => {setName(texte)}}
-			/>
-			<Text>Lastname</Text>
-			<TextInput
-				value={lastname}
-				maxLength={15}
-				placeholder="Lastname"
-				style={style.input}
-				onChangeText={(texte) => {setLastname(texte)}}
-			/>
-			<Text>Phone Number</Text>
-			<TextInput
-				style={style.input}
-				maxLength={10}
-				keyboardType="numeric"
-				type="number"				
-				value={phone}
-				onChangeText={(texte) => filtrerChiffres(texte)}
-			/>
+			<View style={style.inputContainer}>
+				<Text style={style.title}>Name</Text>
+				<TextInput
+					value={name}
+					maxLength={15}
+					placeholder="Name"
+					style={style.input}
+					onChangeText={(texte) => {setName(texte)}}
+				/>
+				<Text style={style.title}>Lastname</Text>
+				<TextInput
+					value={lastname}
+					maxLength={15}
+					placeholder="Lastname"
+					style={style.input}
+					onChangeText={(texte) => {setLastname(texte)}}
+				/>
+				<Text style={style.title}>Phone Number</Text>
+				<TextInput
+					style={style.input}
+					maxLength={10}
+					keyboardType="numeric"
+					type="number"				
+					value={phone}
+					onChangeText={(texte) => filtrerChiffres(texte)}
+				/>
+			</View>
 			<View style={[style.Banner, {width: width}]}>
 				<Button
 					title="Cancel"
@@ -90,9 +92,9 @@ const CreateContact = ({ navigation }) => {
 const style =  {
 	input: {
 		borderWidth: 1,
-		borderColor: 'black',
-		width: 100,
+		width: '100%',
 		borderRadius: 5,
+		backgroundColor: 'gray',
 	},
 	Banner: {
 		flexDirection: 'row',
@@ -104,6 +106,20 @@ const style =  {
 		position: 'absolute',
 		bottom: 0,
 		backgroundColor: '#fff'
+	},
+	title: {
+		fontSize: 20,
+		marginTop: 20,
+		color: 'white',
+		paddingBottom: 10,
+	},
+	inputContainer:{
+		height: 300,
+		width: 300,
+		backgroundColor: '#424242',
+		borderRadius: 10,
+		paddingLeft: 10,
+		paddingRight: 10,
 	},
 };
 

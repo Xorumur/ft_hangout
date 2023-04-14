@@ -14,7 +14,7 @@ const Homepage = ({ navigation }) => {
 	async function getContacts() {
 		try {
 		  const result = await DatabaseManager.getAllContact();
-		  console.log('Result useeffects ->', result);
+		//   console.log('Result useeffects ->', result);
 		  setContacts(result);
 		} catch (error) {
 		  console.log('ERROR ->', error);
@@ -55,7 +55,7 @@ const style = {
 	container: {
 		flex: 1,
 		flexDirection: 'column',
-		backgroundColor: 'dodgerblue',
+		backgroundColor: '#FD3A73',
 		position: 'relative',
 	},
 	Banner: {

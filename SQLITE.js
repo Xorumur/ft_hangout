@@ -27,11 +27,11 @@ export default class DatabaseManager {
 				sql, 
 				[params], 
 				(trans, results) => {
-					console.log('RESULTS : ', results);
+					// console.log('RESULTS : ', results);
 					resolve(results);
 				},
 				(trans, error) => {
-					console.log('ERROR : ', error);
+					// console.log('ERROR : ', error);
 					reject(error);
 				});
 		});
